@@ -41,6 +41,9 @@ function CreateToDoItems() {
   }
   todoValue.value = "";
   setAlertMessage("Todo item Created Successfully!");
+
+  const sound = new Audio("./sound/add-sound.mp3");
+  sound.play();
 }
 
 function ReadToDoItems() {
@@ -131,6 +134,9 @@ function DeleteToDoItems(e) {
 
     setLocalStorage();
   }
+
+  const sound = new Audio("./sound/delete-sound.mp3");
+  sound.play();
 }
 
 function CompletedToDoItems(e) {
@@ -152,6 +158,9 @@ function CompletedToDoItems(e) {
     setLocalStorage();
     setAlertMessage("Todo item Completed Successfully!");
   }
+
+  const sound = new Audio("./sound/done-sound.mp3");
+  sound.play();
 }
 
 function setLocalStorage() {
